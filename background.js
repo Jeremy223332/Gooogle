@@ -12,7 +12,7 @@ chrome.webRequest.onErrorOccurred.addListener(
     ];
 
     if (targetErrors.includes(details.error)) {
-      const customPage = chrome.runtime.getURL("offline.html");
+      const customPage = chrome.runtime.getURL("index.html");
       
       if (!details.url.startsWith(customPage)) {
         chrome.tabs.update(details.tabId, {
