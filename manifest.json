@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Offline Redirector",
+  "version": "1.0",
+  "description": "Redirects connection errors and offline pages to a custom status view.",
+  "permissions": [
+    "webRequest",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["offline.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
